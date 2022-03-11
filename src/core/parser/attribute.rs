@@ -1,4 +1,3 @@
-use crate::interfaces::html_element::AttrMap;
 use combine::error::ParseError;
 #[allow(unused_imports)]
 use combine::EasyParser;
@@ -11,6 +10,7 @@ use combine::{
     parser::char::{char, letter},
     satisfy,
 };
+use crate::core::interfaces::html_element::AttrMap;
 
 pub fn attributes<Input>() -> impl Parser<Input, Output = AttrMap>
 where

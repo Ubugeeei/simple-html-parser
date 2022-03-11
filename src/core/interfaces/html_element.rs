@@ -1,5 +1,6 @@
-use super::node::{Node, NodeType};
 use std::collections::HashMap;
+
+use super::node::{Node, NodeType};
 
 pub type AttrMap = HashMap<String, String>;
 

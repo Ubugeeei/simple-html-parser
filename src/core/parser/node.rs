@@ -1,12 +1,13 @@
-use super::{
-    error::HTMLParseError,
-    tag::{close_tag, open_tag},
-};
-use crate::interfaces::{html_element::Element, node::Node, text_element::Text};
+
+
 use combine::{
     error::{ParseError, StreamError},
     many1, satisfy, {attempt, choice, many, parser, Parser, Stream},
 };
+
+use crate::core::interfaces::{node::Node, text_element::Text, html_element::Element};
+
+use super::{error::HTMLParseError, tag::{open_tag, close_tag}};
 
 parser! {
     fn nodes[Input]()(Input) -> Vec<Box<Node>>

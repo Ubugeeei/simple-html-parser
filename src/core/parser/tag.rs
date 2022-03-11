@@ -1,5 +1,7 @@
+use crate::core::interfaces::html_element::AttrMap;
+
 use super::attribute::attributes;
-use crate::interfaces::html_element::AttrMap;
+
 use combine::error::ParseError;
 use combine::parser::char::{char, letter};
 use combine::{between, many1, Parser, Stream};
